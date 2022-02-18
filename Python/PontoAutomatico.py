@@ -5,6 +5,7 @@
 #
 
 # Importando bibliotecas
+
 from webbrowser import Chrome
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -45,3 +46,4 @@ time.sleep(1)
 # Fechando navegador
 navegador.quit
 navegador.close
+print("teste")
