@@ -46,4 +46,3 @@ time.sleep(1)
 # Fechando navegador
 navegador.quit
 navegador.close
-print("teste")
