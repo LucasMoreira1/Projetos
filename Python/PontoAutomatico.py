@@ -40,8 +40,8 @@ campo_senha.send_keys(Keys.ENTER)
 time.sleep(1)
 
 # Comando para clicar no botão e realizar a batida de ponto.
-#navegador.find_element_by_xpath('//*[@id="root"]/div/div[1]/div[3]/div[2]/button[2]').click()
+navegador.find_element_by_xpath('//*[@id="root"]/div/div[1]/div[3]/div[2]/button[2]').click()
 time.sleep(1)
 
 # Fechando navegador
-navegador.quit
+navegador.quit()
