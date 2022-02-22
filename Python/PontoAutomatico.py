@@ -19,7 +19,7 @@ senha = "!Parrudo292702"
 # Iniciando o navegador (Chrome)
 navegador = webdriver.Chrome()
 navegador.get(site)
-time.sleep(1)
+time.sleep(2)
 
 # Comando para clicar no botão da primeira tela
 navegador.find_element_by_xpath('//*[@id="root"]/div/div[2]/div[1]/div[2]/button').click()
@@ -37,11 +37,11 @@ campo_senha = navegador.find_element_by_name('Password')
 campo_email.send_keys(email)
 campo_senha.send_keys(senha)
 campo_senha.send_keys(Keys.ENTER)
-time.sleep(1)
+time.sleep(2)
 
 # Comando para clicar no botão e realizar a batida de ponto.
-navegador.find_element_by_xpath('//*[@id="root"]/div/div[1]/div[3]/div[2]/button[2]').click()
-time.sleep(1)
+#navegador.find_element_by_xpath('//*[@id="root"]/div/div[1]/div[3]/div[2]/button[2]').click()
+time.sleep(2)
 
 # Fechando navegador
-navegador.quit()
+#navegador.quit()
