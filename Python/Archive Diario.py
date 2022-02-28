@@ -1,3 +1,9 @@
+
+# TO DO LIST:
+# MELHORAR CÓDIGO PARA TER INTEGRAÇÃO DIRETA COM SAP.  
+
+
+
 #Passo 1 - Abrir e logar no SAP
 import pyautogui
 import time
@@ -6,7 +12,7 @@ usuario = 'schedule2'
 senha = 'sCHeduLe2##'
 
 pyautogui.PAUSE = 2
-pyautogui.alert('Precione "OK" para iniciar o processamento')
+pyautogui.alert('Pressione "OK" para iniciar o processamento')
 #Abrindo SAP
 pyautogui.hotkey('win','r')
 pyautogui.write('sapgui sapaebp1 41')
