@@ -1,79 +1,60 @@
-""" 
-Consulta y Descarga de documentos. Leyendo los IDS del documento de un archivo.
-(Todos los IDs dentro del archivo ids.txt son INVALIDOS por seguridad)
-"""
-import random
+from webbrowser import Chrome
 from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from time import sleep
+from selenium.webdriver.support import expected_conditions as EC
+from re import search
+import requests
+from bs4 import BeautifulSoup
+import time
+import csv
+import codecs
 
-driver = webdriver.Chrome() # REMPLAZA AQUI EL NOMBRE DE TU CHROME DRIVER
- 
-# Voy a la pagina que requiero
-driver.get('https://www.procuraduria.gov.co/CertWEB/Certificado.aspx')
-# Selecciono el tipo de documento a buscar
-boton = driver.find_element_by_xpath('.//select[@class="ComboBox"]/option[2]')
-boton.click()
- 
-#extraigo la pregunta
-pregunta = driver.find_element_by_xpath('.//span[@id="lblPregunta"]').text
- 
-while pregunta != "¿ Cuanto es 2 X 3 ?":
-    boton = driver.find_element_by_xpath('.//input[@type="image"]')
-    boton.click()
-    sleep(random.uniform(0.2, 0.5))
-    pregunta = driver.find_element_by_xpath('.//span[@id="lblPregunta"]').text
- 
-respuesta= "6"
+driver=webdriver.Chrome()
+#pesquisa=input("Digite o que deseja pesquisar: ")
+pesquisa=("condominio")
+time.sleep(2)
+driver.get("https://www.google.com/search?q="+pesquisa)
+time.sleep(2)
 
-input_file = open('ids.txt')
-for documento in input_file: # Itero cada linea de mi archivo (es decir, cada documento)
-  documento = documento.strip() # elimino saltos de linea
+botao = driver.find_element(By.XPATH, '//*[@id="Odp5De"]/div/div/div/div[2]/div[1]/div[2]/g-more-link/a/div')
+botao.click()
+time.sleep(2)
 
-  input_id = WebDriverWait(driver, 0.5).until(
-    EC.presence_of_element_located((By.XPATH, './/input[@name="txtNumID"]'))
-  )
-  input_pregunta = driver.find_element(By.XPATH, './/input[@name="txtRespuestaPregunta"]')
-  
-  # Le hago clear a los inputs para escribir siempre desde cero
-  input_id.clear()
-  input_pregunta.clear()
+codigofonte=driver.page_source
 
-  input_id.send_keys(documento)
-  
-  # Escribo mi contrasena en el input
-  input_pregunta.send_keys(respuesta)
-  
-  # Busco el boton consultar
-  login_button = driver.find_element(By.XPATH, '//input[@type="submit"]')
-  # Le doy click
-  login_button.click()
-  sleep(random.uniform(2, 2.5))
-  
-  validacion = driver.find_element_by_xpath('.//div[@id="ValidationSummary1"]').text
-  if "NO SE ENCUENTRA" in validacion:
-    continue # este continue, va a hacer qeu automaticamente nos movamos en la siguiente itearcion del lazo, es decir, la siguiente linea del archivo
-  
-  tercero = driver.find_element_by_xpath('.//div[@class="datosConsultado"]')
-  
-  primer_nombre = driver.find_element_by_xpath('.//div[@class="datosConsultado"]//span[1]').text
-  segundo_nombre = driver.find_element_by_xpath('.//div[@class="datosConsultado"]//span[2]').text
-  primer_apellido = driver.find_element_by_xpath('.//div[@class="datosConsultado"]//span[3]').text
-  segundo_apellido = driver.find_element_by_xpath('.//div[@class="datosConsultado"]//span[4]').text
-  
-  
-  f = open("./terceros.csv", "a")
-  f.write(primer_nombre + "," + segundo_nombre + "," + primer_apellido + "," + segundo_apellido +"\n")
-  f.close()
-  
-  print (primer_nombre)
-  print (segundo_nombre)
-  print (primer_apellido)
-  print (segundo_apellido)
+paginahtml = codecs.open("resultado.html", mode="w",encoding="utf-8")
+paginahtml.write(codigofonte)
+paginahtml.close()
 
-  
+with open('resultado.html') as html_file:
+    soup = BeautifulSoup(html_file, 'lxml')
+    
+    arquivo = open("resultado.csv","a")
 
+    arquivo.write("Resultados: ")
+    
+    arquivo.write("\n\n")
+    arquivo.close() 
+    time.sleep(2)
 
-input_file.close()
+for div in soup.find_all('div', class_='cXedhc'):
+    nome = div.span.text
+    print(nome)
+    
+    print(div.text)
+
+    print()
+    
+    arquivo = open("resultado.csv","a")
+
+    arquivo.write(div.text)
+    arquivo.write("\n")
+
+    arquivo.close() 
+
+#Correção para salvar os arquivos automatico
+
+#Correção para caractere especial
+#converter arquivo csv para novo csv decodificado
