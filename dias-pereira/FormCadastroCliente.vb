@@ -11,22 +11,45 @@ last_row = Application.WorksheetFunction.CountA(dds.Range("A:A"))
 dds.Range("A" & last_row + 1).Value = last_row
 
 dds.Range("B" & last_row + 1).Value = Me.txtautor.Value
-dds.Range("C" & last_row + 1).Value = Me.txtreu.Value
+dds.Range("C" & last_row + 1).Value = Me.txtnacionalidade.Value
+dds.Range("D" & last_row + 1).Value = Me.txtestadocivil.Value
+dds.Range("E" & last_row + 1).Value = Me.txtprofissao.Value
+dds.Range("F" & last_row + 1).Value = Me.txtrg.Value
+dds.Range("G" & last_row + 1).Value = Me.txtcpf.Value
+dds.Range("H" & last_row + 1).Value = Me.txtnascimento.Value
+dds.Range("I" & last_row + 1).Value = Me.txtemail.Value
+dds.Range("J" & last_row + 1).Value = Me.txttelefone1.Value
+dds.Range("K" & last_row + 1).Value = Me.txttelefone2.Value
+dds.Range("L" & last_row + 1).Value = Me.txtcep.Value
+dds.Range("M" & last_row + 1).Value = Me.txtlogradouro.Value
+dds.Range("N" & last_row + 1).Value = Me.txtnumero.Value
+dds.Range("O" & last_row + 1).Value = Me.txtcomplemento.Value
+dds.Range("P" & last_row + 1).Value = Me.txtbairro.Value
+dds.Range("Q" & last_row + 1).Value = Me.txtcidade.Value
+dds.Range("R" & last_row + 1).Value = Me.txtestado.Value
+dds.Range("S" & last_row + 1).Value = Me.txtreu.Value
+dds.Range("T" & last_row + 1).Value = Me.txtcnpjreu.Value
+dds.Range("U" & last_row + 1).Value = Me.txttelefonereu.Value
+dds.Range("V" & last_row + 1).Value = Me.txtcepreu.Value
+dds.Range("W" & last_row + 1).Value = Me.txtlogradouroreu.Value
+dds.Range("X" & last_row + 1).Value = Me.txtnumeroreu.Value
+dds.Range("Y" & last_row + 1).Value = Me.txtcomplementoreu.Value
+dds.Range("Z" & last_row + 1).Value = Me.txtbairroreu.Value
+dds.Range("AA" & last_row + 1).Value = Me.txtcidadereu.Value
+dds.Range("AB" & last_row + 1).Value = Me.txtestadoreu.Value
+dds.Range("AC" & last_row + 1).Value = Me.txtprocesso.Value
+dds.Range("AD" & last_row + 1).Value = Me.cboxtipoprocesso.Value
+dds.Range("AE" & last_row + 1).Value = Me.txtidprocesso.Value
+dds.Range("AF" & last_row + 1).Value = Me.cboxstatusprocesso.Value
+dds.Range("AG" & last_row + 1).Value = Me.txtnatprocesso.Value
+dds.Range("AH" & last_row + 1).Value = Me.txtassunto1.Value
+dds.Range("AI" & last_row + 1).Value = Me.txtassunto2.Value
+dds.Range("AJ" & last_row + 1).Value = Me.txtassunto3.Value
+dds.Range("AK" & last_row + 1).Value = Me.txtdatapericia.Value
+dds.Range("AL" & last_row + 1).Value = Me.txttipoaudiencia.Value
+dds.Range("AM" & last_row + 1).Value = Me.txtdataaudiencia.Value
+dds.Range("AN" & last_row + 1).Value = Me.txtobservacao.Value
 
-dds.Range("D" & last_row + 1).Value = Me.txttelefone1.Value
-dds.Range("F" & last_row + 1).Value = Me.txtnascimento.Value
-dds.Range("G" & last_row + 1).Value = Me.txtidprocesso.Value
-dds.Range("H" & last_row + 1).Value = Me.txtprocesso.Value
-dds.Range("I" & last_row + 1).Value = Me.cboxstatusprocesso.Value
-dds.Range("J" & last_row + 1).Value = Me.txtnatprocesso.Value
-dds.Range("K" & last_row + 1).Value = Me.txtassunto1.Value
-dds.Range("L" & last_row + 1).Value = Me.txtassunto2.Value
-dds.Range("M" & last_row + 1).Value = Me.txtassunto3.Value
-
-dds.Range("N" & last_row + 1).Value = Me.txtdatapericia.Value
-dds.Range("O" & last_row + 1).Value = Me.txtdataaudiencia.Value
-dds.Range("P" & last_row + 1).Value = Me.txttipoaudiencia.Value
-dds.Range("Q" & last_row + 1).Value = Me.txtobservacao.Value
 '---------------------------------------------------
 Call LimparDadosCadastro
 '---------------------------------------------------

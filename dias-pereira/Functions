@@ -1,0 +1,204 @@
+Sub retornar_programa()
+
+Application.Visible = False
+PaginaInicial.Show
+
+End Sub
+
+'Abrir form "EditarCliente" com dados da lista.
+
+Sub Editar_Cliente()
+    With EditarCliente
+    'Dados Autor
+    
+    'Dados Réu
+    
+    'Dados Processo
+        .txtautor.Value = PaginaInicial.LV1.SelectedItem.SubItems(1)
+        .txtreu.Value = PaginaInicial.LV1.SelectedItem.SubItems(2)
+        .txttelefone1.Value = PaginaInicial.LV1.SelectedItem.SubItems(3)
+        .txtnascimento.Value = PaginaInicial.LV1.SelectedItem.SubItems(5)
+        .txtidprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(6)
+        .txtprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(7)
+        .cboxstatusprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(8)
+        .txtnatprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(9)
+        .txtassunto1.Value = PaginaInicial.LV1.SelectedItem.SubItems(10)
+        .txtassunto2.Value = PaginaInicial.LV1.SelectedItem.SubItems(11)
+        .txtassunto3.Value = PaginaInicial.LV1.SelectedItem.SubItems(12)
+        .txtdatapericia.Value = PaginaInicial.LV1.SelectedItem.SubItems(13)
+        .txtdataaudiencia.Value = PaginaInicial.LV1.SelectedItem.SubItems(14)
+        .txttipoaudiencia.Value = PaginaInicial.LV1.SelectedItem.SubItems(15)
+        .txtobservacao.Value = PaginaInicial.LV1.SelectedItem.SubItems(16)
+        .Show
+    End With
+End Sub
+
+Function BuscarCEP(ValorCEP As String, TipoCampo As String)
+
+Dim XmlDoc As DOMDocument
+Dim XmlNode As IXMLDOMNode
+Dim XmlNodes As IXMLDOMNodeList
+
+Set XmlDoc = New DOMDocument
+
+XmlDoc.async = False
+XmlDoc.Load ("https://viacep.com.br/ws/" + ValorCEP + "/xml/")
+
+Set XmlNodes = XmlDoc.SelectNodes("/xmlcep/" + TipoCampo)
+
+For Each XmlNode In XmlNodes
+BuscarCEP = XmlNode.Text
+Next
+
+End Function
+'Função Busca CEP autor - CadastroCliente
+Sub BuscaCEP_autor_cadastro()
+
+If CadastroCliente.txtcep = Empty Then
+MsgBox "Informe um CEP válido para realizar a busca."
+CadastroCliente.txtcep.SetFocus
+Else
+
+CadastroCliente.txtlogradouro.Text = UCase(BuscarCEP(CadastroCliente.txtcep, "logradouro"))
+CadastroCliente.txtbairro.Text = UCase(BuscarCEP(CadastroCliente.txtcep, "bairro"))
+CadastroCliente.txtcidade.Text = UCase(BuscarCEP(CadastroCliente.txtcep, "localidade"))
+CadastroCliente.txtestado.Text = UCase(BuscarCEP(CadastroCliente.txtcep, "uf"))
+End If
+
+End Sub
+'Função Busca CEP réu - CadastroCliente
+Sub BuscaCEP_reu_cadastro()
+If CadastroCliente.txtcepreu = Empty Then
+MsgBox "Informe um CEP válido para realizar a busca."
+CadastroCliente.txtcepreu.SetFocus
+Else
+
+CadastroCliente.txtlogradouroreu.Text = UCase(BuscarCEP(CadastroCliente.txtcepreu, "logradouro"))
+CadastroCliente.txtbairroreu.Text = UCase(BuscarCEP(CadastroCliente.txtcepreu, "bairro"))
+CadastroCliente.txtcidadereu.Text = UCase(BuscarCEP(CadastroCliente.txtcepreu, "localidade"))
+CadastroCliente.txtestadoreu.Text = UCase(BuscarCEP(CadastroCliente.txtcepreu, "uf"))
+End If
+End Sub
+'Função Busca CEP autor - EditarCliente
+Sub BuscaCEP_autor_editar()
+
+If EditarCliente.txtcep = Empty Then
+MsgBox "Informe um CEP válido para realizar a busca."
+EditarCliente.txtcep.SetFocus
+Else
+
+EditarCliente.txtlogradouro.Text = UCase(BuscarCEP(EditarCliente.txtcep, "logradouro"))
+EditarCliente.txtbairro.Text = UCase(BuscarCEP(EditarCliente.txtcep, "bairro"))
+EditarCliente.txtcidade.Text = UCase(BuscarCEP(EditarCliente.txtcep, "localidade"))
+EditarCliente.txtestado.Text = UCase(BuscarCEP(EditarCliente.txtcep, "uf"))
+End If
+
+End Sub
+'Função Busca CEP réu - EditarCliente
+Sub BuscaCEP_reu_editar()
+If EditarCliente.txtcepreu = Empty Then
+MsgBox "Informe um CEP válido para realizar a busca."
+EditarCliente.txtcepreu.SetFocus
+Else
+
+EditarCliente.txtlogradouroreu.Text = UCase(BuscarCEP(EditarCliente.txtcepreu, "logradouro"))
+EditarCliente.txtbairroreu.Text = UCase(BuscarCEP(EditarCliente.txtcepreu, "bairro"))
+EditarCliente.txtcidadereu.Text = UCase(BuscarCEP(EditarCliente.txtcepreu, "localidade"))
+EditarCliente.txtestadoreu.Text = UCase(BuscarCEP(EditarCliente.txtcepreu, "uf"))
+End If
+End Sub
+
+'Limpar campos das telas de EditarCliente
+Sub LimparDadosEditar()
+
+'Dados autor
+EditarCliente.txtautor.Value = ""
+EditarCliente.txtnacionalidade.Value = ""
+EditarCliente.txtestadocivil.Value = ""
+EditarCliente.txtprofissao.Value = ""
+EditarCliente.txtrg.Value = ""
+EditarCliente.txtcpf.Value = ""
+EditarCliente.txtnascimento.Value = ""
+EditarCliente.txtemail.Value = ""
+EditarCliente.txttelefone1.Value = ""
+EditarCliente.txttelefone2.Value = ""
+EditarCliente.txtcep.Value = ""
+EditarCliente.txtlogradouro.Value = ""
+EditarCliente.txtnumero.Value = ""
+EditarCliente.txtcomplemento.Value = ""
+EditarCliente.txtbairro.Value = ""
+EditarCliente.txtcidade.Value = ""
+EditarCliente.txtestado.Value = ""
+
+'Dados réu
+EditarCliente.txtreu.Value = ""
+EditarCliente.txtcnpjreu.Value = ""
+EditarCliente.txttelefonereu.Value = ""
+EditarCliente.txtcepreu.Value = ""
+EditarCliente.txtlogradouroreu.Value = ""
+EditarCliente.txtnumeroreu.Value = ""
+EditarCliente.txtcomplementoreu.Value = ""
+EditarCliente.txtbairroreu.Value = ""
+EditarCliente.txtcidadereu.Value = ""
+EditarCliente.txtestadoreu.Value = ""
+
+'Dados Processo
+EditarCliente.txtprocesso.Value = ""
+EditarCliente.txtidprocesso.Value = ""
+EditarCliente.txtnatprocesso.Value = ""
+EditarCliente.txtassunto1.Value = ""
+EditarCliente.txtassunto2.Value = ""
+EditarCliente.txtassunto3.Value = ""
+EditarCliente.txtdatapericia.Value = ""
+EditarCliente.txttipoaudiencia.Value = ""
+EditarCliente.txtdataaudiencia.Value = ""
+EditarCliente.txtobservacao.Value = ""
+
+End Sub
+'Limpar campos das telas de CadastroCliente
+Sub LimparDadosCadastro()
+
+'Dados autor
+CadastroCliente.txtautor.Value = ""
+CadastroCliente.txtnacionalidade.Value = ""
+CadastroCliente.txtestadocivil.Value = ""
+CadastroCliente.txtprofissao.Value = ""
+CadastroCliente.txtrg.Value = ""
+CadastroCliente.txtcpf.Value = ""
+CadastroCliente.txtnascimento.Value = ""
+CadastroCliente.txtemail.Value = ""
+CadastroCliente.txttelefone1.Value = ""
+CadastroCliente.txttelefone2.Value = ""
+CadastroCliente.txtcep.Value = ""
+CadastroCliente.txtlogradouro.Value = ""
+CadastroCliente.txtnumero.Value = ""
+CadastroCliente.txtcomplemento.Value = ""
+CadastroCliente.txtbairro.Value = ""
+CadastroCliente.txtcidade.Value = ""
+CadastroCliente.txtestado.Value = ""
+
+'Dados réu
+CadastroCliente.txtreu.Value = ""
+CadastroCliente.txtcnpjreu.Value = ""
+CadastroCliente.txttelefonereu.Value = ""
+CadastroCliente.txtcepreu.Value = ""
+CadastroCliente.txtlogradouroreu.Value = ""
+CadastroCliente.txtnumeroreu.Value = ""
+CadastroCliente.txtcomplementoreu.Value = ""
+CadastroCliente.txtbairroreu.Value = ""
+CadastroCliente.txtcidadereu.Value = ""
+CadastroCliente.txtestadoreu.Value = ""
+
+'Dados Processo
+CadastroCliente.txtprocesso.Value = ""
+CadastroCliente.txtidprocesso.Value = ""
+CadastroCliente.txtnatprocesso.Value = ""
+CadastroCliente.txtassunto1.Value = ""
+CadastroCliente.txtassunto2.Value = ""
+CadastroCliente.txtassunto3.Value = ""
+CadastroCliente.txtdatapericia.Value = ""
+CadastroCliente.txttipoaudiencia.Value = ""
+CadastroCliente.txtdataaudiencia.Value = ""
+CadastroCliente.txtobservacao.Value = ""
+
+End Sub

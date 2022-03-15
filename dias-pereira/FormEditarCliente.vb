@@ -1,6 +1,6 @@
 Private Sub imgAtualizarCliente_click()
 
-If PaginaInicial.TextBox8.Value = "" Then
+If PaginaInicial.TextBox8.Value = Me. "" Then
 MsgBox "Selecione o usuário para editar."
 Exit Sub
 End If
@@ -13,22 +13,48 @@ selected_row = Application.WorksheetFunction.Match(PaginaInicial.TextBox8.Value,
 
 If selected_row <> 1 Then
     dds.Range("B" & selected_row).Value = Me.txtautor.Value
-    dds.Range("C" & selected_row).Value = Me.txtreu.Value
-    
-    dds.Range("D" & selected_row).Value = Me.txttelefone1.Value
-    dds.Range("F" & selected_row).Value = Me.txtnascimento.Value
-    dds.Range("G" & selected_row).Value = Me.txtidprocesso.Value
-    dds.Range("H" & selected_row).Value = Me.txtprocesso.Value
-    dds.Range("I" & selected_row).Value = Me.cboxstatusprocesso.Value
-    dds.Range("J" & selected_row).Value = Me.txtnatprocesso.Value
-    dds.Range("K" & selected_row).Value = Me.txtassunto1.Value
-    dds.Range("L" & selected_row).Value = Me.txtassunto2.Value
-    dds.Range("M" & selected_row).Value = Me.txtassunto3.Value
-    
-    dds.Range("N" & selected_row).Value = Me.txtdatapericia.Value
-    dds.Range("O" & selected_row).Value = Me.txtdataaudiencia.Value
-    dds.Range("P" & selected_row).Value = Me.txttipoaudiencia.Value
-    dds.Range("Q" & selected_row).Value = Me.txtobservacao.Value
+    dds.Range("C" & selected_row).Value = Me.txtnacionalidade.Value
+    dds.Range("D" & selected_row).Value = Me.txtestadocivil.Value
+    dds.Range("E" & selected_row).Value = Me.txtprofissao.Value
+    dds.Range("F" & selected_row).Value = Me.txtrg.Value
+    dds.Range("G" & selected_row).Value = Me.txtcpf.Value
+    dds.Range("H" & selected_row).Value = Me.txtnascimento.Value
+    dds.Range("I" & selected_row).Value = Me.txtemail.Value
+    dds.Range("J" & selected_row).Value = Me.txttelefone1.Value
+    dds.Range("K" & selected_row).Value = Me.txttelefone2.Value
+    dds.Range("L" & selected_row).Value = Me.txtcep.Value
+    dds.Range("M" & selected_row).Value = Me.txtlogradouro.Value
+    dds.Range("N" & selected_row).Value = Me.txtnumero.Value
+    dds.Range("O" & selected_row).Value = Me.txtcomplemento.Value
+    dds.Range("P" & selected_row).Value = Me.txtbairro.Value
+    dds.Range("Q" & selected_row).Value = Me.txtcidade.Value
+    dds.Range("R" & selected_row).Value = Me.txtestado.Value
+    dds.Range("S" & selected_row).Value = Me.txtreu.Value
+    dds.Range("T" & selected_row).Value = Me.txtcnpjreu.Value
+    dds.Range("U" & selected_row).Value = Me.txttelefonereu.Value
+    dds.Range("V" & selected_row).Value = Me.txtcepreu.Value
+    dds.Range("W" & selected_row).Value = Me.txtlogradouroreu.Value
+    dds.Range("X" & selected_row).Value = Me.txtnumeroreu.Value
+    dds.Range("Y" & selected_row).Value = Me.txtcomplementoreu.Value
+    dds.Range("Z" & selected_row).Value = Me.txtbairroreu.Value
+    dds.Range("AA" & selected_row).Value = Me.txtcidadereu.Value
+    dds.Range("AB" & selected_row).Value = Me.txtestadoreu.Value
+    dds.Range("AC" & selected_row).Value = Me.txtprocesso.Value
+    dds.Range("AD" & selected_row).Value = Me.cboxtipoprocesso.Value
+    dds.Range("AE" & selected_row).Value = Me.txtidprocesso.Value
+    dds.Range("AF" & selected_row).Value = Me.cboxstatusprocesso.Value
+    dds.Range("AG" & selected_row).Value = Me.txtnatprocesso.Value
+    dds.Range("AH" & selected_row).Value = Me.txtassunto1.Value
+    dds.Range("AI" & selected_row).Value = Me.txtassunto2.Value
+    dds.Range("AJ" & selected_row).Value = Me.txtassunto3.Value
+    dds.Range("AK" & selected_row).Value = Me.txtdatapericia.Value
+    dds.Range("AL" & selected_row).Value = Me.txttipoaudiencia.Value
+    dds.Range("AM" & selected_row).Value = Me.txtdataaudiencia.Value
+    dds.Range("AN" & selected_row).Value = Me.txtobservacao.Value
+
+
+
+
 Else
 Exit Sub
 End If

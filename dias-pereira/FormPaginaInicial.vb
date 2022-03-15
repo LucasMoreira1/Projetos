@@ -19,11 +19,11 @@
 ''      - Botão "Busca CEP" para preencher dados de endereço durante cadastro e edição de cliente.
 ''      - Adicionar colunas na base do Excel referente as colunas criadas na ultima alteração de layout.
 ''      - Criado funções "LimparDadosCliente" e "LimparDadosCadastro" no modulo "Functions".
-''
-''
-'' A fazer:
 ''      - Ajustar Codigos para preencher colunas no Excel (CadastroCliente e EditarCliente).
 ''      - Ajustar Lista LV1 para mostrar corretamente os dados das colunas.
+''
+'' A fazer:
+''
 ''      - Ajustar campos númericos e de data nos formulários de Cadastro e Edição.
 ''      - Personalizar Lista LV1 para mostrar apenas dados importantes. (Questionar a Dra. Vanessa).
 ''          - Testar pesquisa (Filtro) com esse ajuste na Lista LV1.
@@ -187,7 +187,6 @@ On Error GoTo Erro
             ColunaC1 = 12
             Case Planilha2.Range("B15").Text
             ColunaC1 = 13
-            
             Case Planilha2.Range("B16").Text
             ColunaC1 = 14
             Case Planilha2.Range("B17").Text
@@ -196,7 +195,6 @@ On Error GoTo Erro
             ColunaC1 = 16
             Case Planilha2.Range("B19").Text
             ColunaC1 = 17
-            
             Case Planilha2.Range("B20").Text
             ColunaC1 = 18
             Case Planilha2.Range("B21").Text
@@ -243,10 +241,6 @@ On Error GoTo Erro
             ColunaC1 = 39
             Case Planilha2.Range("B42").Text
             ColunaC1 = 40
-
-            
-            
-            
         End Select
 
         If ComboBox1.Value = "Filtro 1" Then
@@ -280,7 +274,6 @@ On Error GoTo Erro
             ColunaC2 = 12
             Case Planilha2.Range("B15").Text
             ColunaC2 = 13
-            
             Case Planilha2.Range("B16").Text
             ColunaC2 = 14
             Case Planilha2.Range("B17").Text
@@ -289,7 +282,6 @@ On Error GoTo Erro
             ColunaC2 = 16
             Case Planilha2.Range("B19").Text
             ColunaC2 = 17
-            
             Case Planilha2.Range("B20").Text
             ColunaC2 = 18
             Case Planilha2.Range("B21").Text
@@ -336,8 +328,7 @@ On Error GoTo Erro
             ColunaC2 = 39
             Case Planilha2.Range("B42").Text
             ColunaC2 = 40
-            
-        End Select
+       End Select
         
         If ComboBox2.Value = "Filtro 2" Then
             ColunaC2 = 1
@@ -370,7 +361,6 @@ On Error GoTo Erro
             ColunaC3 = 12
             Case Planilha2.Range("B15").Text
             ColunaC3 = 13
-            
             Case Planilha2.Range("B16").Text
             ColunaC3 = 14
             Case Planilha2.Range("B17").Text
@@ -379,7 +369,6 @@ On Error GoTo Erro
             ColunaC3 = 16
             Case Planilha2.Range("B19").Text
             ColunaC3 = 17
-            
             Case Planilha2.Range("B20").Text
             ColunaC3 = 18
             Case Planilha2.Range("B21").Text
@@ -426,9 +415,6 @@ On Error GoTo Erro
             ColunaC3 = 39
             Case Planilha2.Range("B42").Text
             ColunaC3 = 40
-
-            
-            
         End Select
         
         If ComboBox3.Value = "Filtro 3" Then
@@ -446,7 +432,7 @@ On Error GoTo Erro
         Set Item = LV1.ListItems.Add(Text:=.Cells(linha, 1))
             Item.SubItems(1) = .Cells(linha, 2)
             Item.SubItems(2) = .Cells(linha, 3)
-            Item.ListSubItems.Add , , Format(Cells(linha, 4), "(00)00000-0000")
+            Item.SubItems(3) = .Cells(linha, 4)
             Item.SubItems(4) = .Cells(linha, 5)
             Item.SubItems(5) = .Cells(linha, 6)
             Item.SubItems(6) = .Cells(linha, 7)
@@ -457,11 +443,9 @@ On Error GoTo Erro
             Item.SubItems(11) = .Cells(linha, 12)
             Item.SubItems(12) = .Cells(linha, 13)
             Item.SubItems(13) = .Cells(linha, 14)
-            
             Item.SubItems(14) = .Cells(linha, 15)
             Item.SubItems(15) = .Cells(linha, 16)
             Item.SubItems(16) = .Cells(linha, 17)
-            
             Item.SubItems(17) = .Cells(linha, 18)
             Item.SubItems(18) = .Cells(linha, 19)
             Item.SubItems(19) = .Cells(linha, 20)
@@ -642,7 +626,6 @@ LV1.ListItems.Clear
         ColunaC1 = 12
         Case Planilha2.Range("B15").Text
         ColunaC1 = 13
-        
         Case Planilha2.Range("B16").Text
         ColunaC1 = 14
         Case Planilha2.Range("B17").Text
@@ -651,7 +634,6 @@ LV1.ListItems.Clear
         ColunaC1 = 16
         Case Planilha2.Range("B19").Text
         ColunaC1 = 17
-        
         Case Planilha2.Range("B20").Text
         ColunaC1 = 18
         Case Planilha2.Range("B21").Text
@@ -698,9 +680,6 @@ LV1.ListItems.Clear
         ColunaC1 = 39
         Case Planilha2.Range("B42").Text
         ColunaC1 = 40
-
-            
-        
     End Select
 
     If ComboBox1.Value = "Filtro 1" Then
@@ -734,7 +713,6 @@ LV1.ListItems.Clear
         ColunaC2 = 12
         Case Planilha2.Range("B15").Text
         ColunaC2 = 13
-        
         Case Planilha2.Range("B16").Text
         ColunaC2 = 14
         Case Planilha2.Range("B17").Text
@@ -743,7 +721,6 @@ LV1.ListItems.Clear
         ColunaC2 = 16
         Case Planilha2.Range("B19").Text
         ColunaC2 = 17
-            
         Case Planilha2.Range("B20").Text
         ColunaC2 = 18
         Case Planilha2.Range("B21").Text
@@ -790,9 +767,7 @@ LV1.ListItems.Clear
         ColunaC2 = 39
         Case Planilha2.Range("B42").Text
         ColunaC2 = 40
-
-            
-    End Select
+   End Select
 
     If ComboBox2.Value = "Filtro 2" Then
         ColunaC2 = 1
@@ -825,7 +800,6 @@ LV1.ListItems.Clear
         ColunaC3 = 12
         Case Planilha2.Range("B15").Text
         ColunaC3 = 13
-        
         Case Planilha2.Range("B16").Text
         ColunaC3 = 14
         Case Planilha2.Range("B17").Text
@@ -834,7 +808,6 @@ LV1.ListItems.Clear
         ColunaC3 = 16
         Case Planilha2.Range("B19").Text
         ColunaC3 = 17
-        
         Case Planilha2.Range("B20").Text
         ColunaC3 = 18
         Case Planilha2.Range("B21").Text
@@ -881,8 +854,6 @@ LV1.ListItems.Clear
         ColunaC3 = 39
         Case Planilha2.Range("B42").Text
         ColunaC3 = 40
-
-            
     End Select
 
     If ComboBox3.Value = "Filtro 3" Then
@@ -900,7 +871,7 @@ LV1.ListItems.Clear
     Set Item = LV1.ListItems.Add(Text:=.Cells(linha, 1))
         Item.SubItems(1) = .Cells(linha, 2)
         Item.SubItems(2) = .Cells(linha, 3)
-        Item.ListSubItems.Add , , Format(Cells(linha, 4), "(00)00000-0000")
+        Item.SubItems(3) = .Cells(linha, 4)
         Item.SubItems(4) = .Cells(linha, 5)
         Item.SubItems(5) = .Cells(linha, 6)
         Item.SubItems(6) = .Cells(linha, 7)
@@ -911,11 +882,9 @@ LV1.ListItems.Clear
         Item.SubItems(11) = .Cells(linha, 12)
         Item.SubItems(12) = .Cells(linha, 13)
         Item.SubItems(13) = .Cells(linha, 14)
-        
         Item.SubItems(14) = .Cells(linha, 15)
         Item.SubItems(15) = .Cells(linha, 16)
         Item.SubItems(16) = .Cells(linha, 17)
-        
         Item.SubItems(17) = .Cells(linha, 18)
         Item.SubItems(18) = .Cells(linha, 19)
         Item.SubItems(19) = .Cells(linha, 20)
@@ -939,8 +908,6 @@ LV1.ListItems.Clear
         Item.SubItems(37) = .Cells(linha, 38)
         Item.SubItems(38) = .Cells(linha, 39)
         Item.SubItems(39) = .Cells(linha, 40)
-
-
     End If
     linha = linha + 1
     
