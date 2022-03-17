@@ -25,18 +25,17 @@
 '' Revisão 17/03/2022
 '' Modificações:
 ''      - Minimizar APP
+''      - Ajustar campos númericos e de data nos formulários de Cadastro e Edição.
+''      - Adicionado Label e função para mostrar idade ao preencher a data de nascimento
+''      - Add Botões de Fluxo de Caixa e Botão para Criar petição.
 ''
 ''
 '' A fazer:
-''
-''      - Ajustar campos númericos e de data nos formulários de Cadastro e Edição.
-''      - Personalizar Lista LV1 para mostrar apenas dados importantes. (Questionar a Dra. Vanessa).
+''      - Personalizar Lista LV1 para mostrar apenas dados importantes. (Remover lista/Menos info possivel).
 ''          - Testar pesquisa (Filtro) com esse ajuste na Lista LV1.
 ''      - Continuar migrando funções para o modulo "Functions"
 ''
-
-
-
+''
 
 '                                   -----------------------------
 '                                   |      Listas e ajustes     |
@@ -1066,6 +1065,11 @@ End Sub
         imgSenha.SpecialEffect = fmSpecialEffectSunken
         imgSenha.ControlTipText = "Alterar Senha"
         End Sub
+        Private Sub imgFluxoCaixa_MouseMove(ByVal Button As Integer, ByVal Shift As Integer, ByVal X As Single, ByVal Y As Single)
+        imgFluxoCaixa.BorderStyle = fmBorderStyleSingle
+        imgFluxoCaixa.SpecialEffect = fmSpecialEffectSunken
+        imgFluxoCaixa.ControlTipText = "Fluxo de caixa"
+        End Sub
         Private Sub imgMensagens_MouseMove(ByVal Button As Integer, ByVal Shift As Integer, ByVal X As Single, ByVal Y As Single)
         imgMensagens.BorderStyle = fmBorderStyleSingle
         imgMensagens.SpecialEffect = fmSpecialEffectSunken
@@ -1337,5 +1341,3 @@ Erro:
         'Atualiza a lista
         Call PaginaInicial.Filtro
         End Sub
-
-

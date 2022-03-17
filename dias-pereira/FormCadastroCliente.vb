@@ -1,4 +1,19 @@
 'Ajustes
+Private Sub txtnascimento_Change()
+    'Formata : dd/mm/aaaa
+    If Len(txtnascimento) = 2 Or Len(txtnascimento) = 5 Then
+        txtnascimento.Text = txtnascimento.Text & "/"
+    End If
+    
+    Dim resultado As String
+    If Len(txtnascimento) = 10 Then
+        resultado = Right(txtnascimento, 4)
+        calculo = (resultado - Year(Now))
+        idade = (calculo * -1)
+        Me.lbidade.Caption = idade & " anos."
+        Me.lbidade.Visible = True
+    End If
+End Sub
 Private Sub txtcep_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
     'Limita a Qde de caracteres
     txtcep.MaxLength = 8
@@ -8,6 +23,7 @@ Private Sub txtcep_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
         KeyAscii = 0
     End If
 End Sub
+
 Private Sub txtrg_Change()
     'Formata : 00.000.000-0
     If Len(txtrg) = 2 Then
@@ -289,17 +305,6 @@ Private Sub txtnascimento_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
     End If
     
 End Sub
-
-Private Sub txtnascimento_Change()
-    'Formata : dd/mm/aaaa
-    If Len(txtnascimento) = 2 Or Len(txtnascimento) = 5 Then
-        txtnascimento.Text = txtnascimento.Text & "/"
-        
-    End If
-  
-End Sub
-
-
 
 
 Private Sub txtprocesso_Change()

@@ -1,4 +1,19 @@
 'Ajustes
+Private Sub txtnascimento_Change()
+    'Formata : dd/mm/aaaa
+    If Len(txtnascimento) = 2 Or Len(txtnascimento) = 5 Then
+        txtnascimento.Text = txtnascimento.Text & "/"
+    End If
+    
+    Dim resultado As String
+    If Len(txtnascimento) = 10 Then
+        resultado = Right(txtnascimento, 4)
+        calculo = (resultado - Year(Now))
+        idade = (calculo * -1)
+        Me.lbidade.Caption = idade & " anos."
+        Me.lbidade.Visible = True
+    End If
+End Sub
 Private Sub txtcep_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
     'Limita a Qde de caracteres
     txtcep.MaxLength = 8
@@ -291,15 +306,6 @@ Private Sub txtnascimento_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
     End If
     
 End Sub
-
-Private Sub txtnascimento_Change()
-    'Formata : dd/mm/aaaa
-    If Len(txtnascimento) = 2 Or Len(txtnascimento) = 5 Then
-        txtnascimento.Text = txtnascimento.Text & "/"
-    End If
-  
-End Sub
-
 Private Sub txtprocesso_Change()
     
 If Me.cboxtipoprocesso.Text = "Judicial" Then
@@ -390,3 +396,9 @@ imgAtualizarCliente.BorderStyle = fmBorderStyleSingle
 imgAtualizarCliente.SpecialEffect = fmSpecialEffectSunken
 imgAtualizarCliente.ControlTipText = "Atualizar Cliente"
 End Sub
+Private Sub imgCriarPeticao_MouseMove(ByVal Button As Integer, ByVal Shift As Integer, ByVal X As Single, ByVal Y As Single)
+imgCriarPeticao.BorderStyle = fmBorderStyleSingle
+imgCriarPeticao.SpecialEffect = fmSpecialEffectSunken
+imgCriarPeticao.ControlTipText = "Criar Petição"
+End Sub
+
