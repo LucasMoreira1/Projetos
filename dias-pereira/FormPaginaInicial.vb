@@ -22,14 +22,19 @@
 ''      - Ajustar Codigos para preencher colunas no Excel (CadastroCliente e EditarCliente).
 ''      - Ajustar Lista LV1 para mostrar corretamente os dados das colunas.
 ''
+'' Revisão 17/03/2022
+'' Modificações:
+''      - Minimizar APP
+''
+''
 '' A fazer:
 ''
 ''      - Ajustar campos númericos e de data nos formulários de Cadastro e Edição.
 ''      - Personalizar Lista LV1 para mostrar apenas dados importantes. (Questionar a Dra. Vanessa).
 ''          - Testar pesquisa (Filtro) com esse ajuste na Lista LV1.
 ''      - Continuar migrando funções para o modulo "Functions"
-''      - Minimizar APP
 ''
+
 
 
 
@@ -49,14 +54,19 @@ TextBox8.Value = LV1.SelectedItem.SubItems(1)
 Call Editar_Cliente
 
 End Sub
+
 Public Sub UserForm_Initialize()
+'Chama função para habilitar botões de maximizar e minimizar
+    SetMaxMin Me.Caption
+
 MultiPage1.BackColor = vbWhite
 'Refresh de dados
 Call atualiza_usuarios
 Call atualiza_mensagem
 'Seleciona a planilha
 ThisWorkbook.Sheets("Dados").Select
-Plan = ThisWorkbook.Sheets("Dados").Name
+
+plan = ThisWorkbook.Sheets("Dados").Name
 Dim D As Integer
     D = Range("Tabelas!B3").End(xlDown).Row
     ComboBox1.RowSource = "Tabelas!B3:B" & D
@@ -66,7 +76,8 @@ Dim li As ListItem
 Dim lsi As ListSubItem
 Dim r As Long
 Dim C As Long
-ultimaCelula = Cells(ActiveSheet.UsedRange.Rows.Count, 1).Row
+
+ultimacelula = Cells(ActiveSheet.UsedRange.Rows.Count, 1).Row
 'Lista 1
 With Me.LV1
     .View = lvwReport
@@ -81,7 +92,7 @@ With Me.LV1
 End With
 'Campos das colunas
 With Me.LV1
-    For r = 2 To ultimaCelula
+    For r = 2 To ultimacelula
         Set li = .ListItems.Add(, , Cells(r, 1)) 'id
         li.ListSubItems.Add , , Cells(r, 2) 'autor
         li.ListSubItems.Add , , Cells(r, 3) 'nacionalidade
@@ -135,13 +146,13 @@ On Error GoTo Erro
         Dim keys As New Selenium.keys
         Dim nome, contato, arquivo1, arquivo2, Msg, URLweb, URLnumero As String
         Dim msgPerso As String
-        Dim ultimaCelula, i As Integer
+        Dim ultimacelula, i As Integer
         Dim FindBy As New Selenium.by
         Dim textBox As String
         Dim linha As Long
     'Selecionar a nossa folha de trabalho
         ThisWorkbook.Sheets("Dados").Select
-        Plan = ThisWorkbook.Sheets("Dados").Name
+        plan = ThisWorkbook.Sheets("Dados").Name
     'Atribuir valores as nossas variaveis
         URLweb = "https://web.whatsapp.com"
         textBox = PaginaInicial.TB1.Value
@@ -421,9 +432,9 @@ On Error GoTo Erro
             ColunaC3 = 1
         End If
             
-        With Sheets(Plan)
-        ultimaCelula = Cells(ActiveSheet.UsedRange.Rows.Count, 1).Row
-        Do While linha <= ultimaCelula
+        With Sheets(plan)
+        ultimacelula = Cells(ActiveSheet.UsedRange.Rows.Count, 1).Row
+        Do While linha <= ultimacelula
         
         If UCase(Cells(linha, ColunaC1)) Like UCase("*" & Trim(TextBox1) & "*") And _
             UCase(Cells(linha, ColunaC2)) Like UCase("*" & Trim(TextBox2) & "*") And _
@@ -584,7 +595,7 @@ End Sub
 Public Sub Filtro()
 
 ThisWorkbook.Sheets("Dados").Select
-Plan = ThisWorkbook.Sheets("Dados").Name
+plan = ThisWorkbook.Sheets("Dados").Name
 
 Tabelas = Planilha2.Name
 
@@ -860,9 +871,9 @@ LV1.ListItems.Clear
         ColunaC3 = 1
     End If
     
-    With Sheets(Plan)
-    ultimaCelula = Cells(ActiveSheet.UsedRange.Rows.Count, 1).Row
-    Do While linha <= ultimaCelula
+    With Sheets(plan)
+    ultimacelula = Cells(ActiveSheet.UsedRange.Rows.Count, 1).Row
+    Do While linha <= ultimacelula
     
     If UCase(Cells(linha, ColunaC1)) Like UCase("*" & Trim(TextBox1) & "*") And _
         UCase(Cells(linha, ColunaC2)) Like UCase("*" & Trim(TextBox2) & "*") And _
@@ -947,12 +958,6 @@ End Sub
 Private Sub imgCriarCliente_click()
 CadastroCliente.Show
 End Sub
-
-
-
-
-
-
 
 
 
@@ -1318,11 +1323,11 @@ Erro:
         Dim selected_row As Long
         selected_row = Application.WorksheetFunction.Match(PaginaInicial.TextBox8.Value, dds.Range("B:B"), 0)
         'Confirmação de exclusão
-        Dim Msg, Style, Title, Response
+        Dim Msg, STYLE, Title, Response
         Msg = "Tem certeza que deseja excluir essa linha?"
-        Style = vbYesNo + vbCritical + vbDefaultButton2
+        STYLE = vbYesNo + vbCritical + vbDefaultButton2
         Title = "Confirmação de exclusão"
-        Response = MsgBox(Msg, Style, Title)
+        Response = MsgBox(Msg, STYLE, Title)
             If Response = vbYes Then
                 MsgBox "Cliente excluído com sucesso"
                 dds.Range("B" & selected_row).EntireRow.Delete
@@ -1332,7 +1337,5 @@ Erro:
         'Atualiza a lista
         Call PaginaInicial.Filtro
         End Sub
-
-
 
 

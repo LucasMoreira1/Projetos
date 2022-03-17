@@ -1,3 +1,182 @@
+'Ajustes
+Private Sub txtcep_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+    'Limita a Qde de caracteres
+    txtcep.MaxLength = 8
+
+    'Para permitir que apenas números sejam digitados
+    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
+        KeyAscii = 0
+    End If
+End Sub
+Private Sub txtrg_Change()
+    'Formata : 00.000.000-0
+    If Len(txtrg) = 2 Then
+        txtrg.Text = txtrg.Text & "."
+        
+    End If
+    If Len(txtrg) = 6 Then
+        txtrg.Text = txtrg.Text & "."
+        
+    End If
+     If Len(txtrg) = 10 Then
+        txtrg.Text = txtrg.Text & "-"
+    End If
+End Sub
+Private Sub txtrg_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+    'Limita a Qde de caracteres
+    txtrg.MaxLength = 12
+
+    'para permitir que apenas números sejam digitados
+    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
+        KeyAscii = 0
+    End If
+End Sub
+Private Sub txtcpf_Change()
+    'Formata : 000.000.000-00
+    If Len(txtcpf) = 3 Then
+        txtcpf.Text = txtcpf.Text & "."
+        
+    End If
+    If Len(txtcpf) = 7 Then
+        txtcpf.Text = txtcpf.Text & "."
+        
+    End If
+     If Len(txtcpf) = 11 Then
+        txtcpf.Text = txtcpf.Text & "-"
+    End If
+End Sub
+Private Sub txtcpf_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+    'Limita a Qde de caracteres
+    txtcpf.MaxLength = 14
+    
+    'para permitir que apenas números sejam digitados
+    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
+        KeyAscii = 0
+    End If
+End Sub
+Private Sub txttelefone1_Change()
+    'Formata : (00)00000-0000
+    If Len(txttelefone1) = 1 Then
+        txttelefone1.Text = "(" & txttelefone1.Text
+        
+    End If
+    If Len(txttelefone1) = 3 Then
+        txttelefone1.Text = txttelefone1.Text & ")"
+        
+    End If
+     If Len(txttelefone1) = 9 Then
+        txttelefone1.Text = txttelefone1.Text & "-"
+    End If
+End Sub
+Private Sub txttelefone1_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+    'Limita a Qde de caracteres
+    txttelefone1.MaxLength = 14
+    
+    'para permitir que apenas números sejam digitados
+    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
+        KeyAscii = 0
+    End If
+End Sub
+Private Sub txttelefone2_Change()
+    'Formata : (00)00000-0000
+    If Len(txttelefone2) = 1 Then
+        txttelefone2.Text = "(" & txttelefone2.Text
+        
+    End If
+    If Len(txttelefone2) = 3 Then
+        txttelefone2.Text = txttelefone2.Text & ")"
+        
+    End If
+     If Len(txttelefone2) = 9 Then
+        txttelefone2.Text = txttelefone2.Text & "-"
+    End If
+End Sub
+Private Sub txttelefone2_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+    'Limita a Qde de caracteres
+    txttelefone2.MaxLength = 14
+    
+    'para permitir que apenas números sejam digitados
+    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
+        KeyAscii = 0
+    End If
+End Sub
+Private Sub txtnumero_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+    'Limita a Qde de caracteres
+    txtnumero.MaxLength = 5
+    
+    'para permitir que apenas números sejam digitados
+    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
+        KeyAscii = 0
+    End If
+
+End Sub
+Private Sub txtcnpjreu_Change()
+    'Formata : 00.000.000/0000-00
+    If Len(txtcnpjreu) = 2 Then
+        txtcnpjreu.Text = txtcnpjreu.Text & "."
+        
+    End If
+    If Len(txtcnpjreu) = 6 Then
+        txtcnpjreu.Text = txtcnpjreu.Text & "."
+        
+    End If
+     If Len(txtcnpjreu) = 10 Then
+        txtcnpjreu.Text = txtcnpjreu.Text & "/"
+    End If
+    If Len(txtcnpjreu) = 15 Then
+        txtcnpjreu.Text = txtcnpjreu.Text & "-"
+    End If
+End Sub
+Private Sub txtcnpjreu_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+    'Limita a Qde de caracteres
+    txtcnpjreu.MaxLength = 18
+    
+    'para permitir que apenas números sejam digitados
+    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
+        KeyAscii = 0
+    End If
+End Sub
+Private Sub txtcepreu_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+    'Limita a Qde de caracteres
+    txtcepreu.MaxLength = 8
+
+    'Para permitir que apenas números sejam digitados
+    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
+        KeyAscii = 0
+    End If
+End Sub
+Private Sub txtnumeroreu_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+    'Limita a Qde de caracteres
+    txtnumeroreu.MaxLength = 5
+    'Para permitir que apenas números sejam digitados
+    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
+        KeyAscii = 0
+    End If
+End Sub
+Private Sub txttelefonereu_Change()
+    'Formata : (00)00000-0000
+    If Len(txttelefonereu) = 1 Then
+        txttelefonereu.Text = "(" & txttelefonereu.Text
+        
+    End If
+    If Len(txttelefonereu) = 3 Then
+        txttelefonereu.Text = txttelefonereu.Text & ")"
+        
+    End If
+     If Len(txttelefonereu) = 9 Then
+        txttelefonereu.Text = txttelefonereu.Text & "-"
+    End If
+End Sub
+
+Private Sub txttelefonereu_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
+    'Limita a Qde de caracteres
+    txttelefonereu.MaxLength = 14
+    
+    'para permitir que apenas números sejam digitados
+    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
+        KeyAscii = 0
+    End If
+End Sub
 
 
 Private Sub imgAdicionarCliente_click()
@@ -49,7 +228,6 @@ dds.Range("AK" & last_row + 1).Value = Me.txtdatapericia.Value
 dds.Range("AL" & last_row + 1).Value = Me.txttipoaudiencia.Value
 dds.Range("AM" & last_row + 1).Value = Me.txtdataaudiencia.Value
 dds.Range("AN" & last_row + 1).Value = Me.txtobservacao.Value
-
 '---------------------------------------------------
 Call LimparDadosCadastro
 '---------------------------------------------------
@@ -121,6 +299,9 @@ Private Sub txtnascimento_Change()
   
 End Sub
 
+
+
+
 Private Sub txtprocesso_Change()
     
 If Me.cboxtipoprocesso.Text = "Judicial" Then
@@ -156,35 +337,13 @@ Private Sub txtprocesso_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
     txtprocesso.MaxLength = 25
     
     'para permitir que apenas números sejam digitados
-'    If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
-'        KeyAscii = 0
-'    End If
-End Sub
-
-Private Sub txttelefone1_Change()
-    'Formata : (00)00000-0000
-    If Len(txttelefone1) = 1 Then
-        txttelefone1.Text = "(" & txttelefone1.Text
-        
-    End If
-    If Len(txttelefone1) = 3 Then
-        txttelefone1.Text = txttelefone1.Text & ")"
-        
-    End If
-     If Len(txttelefone1) = 9 Then
-        txttelefone1.Text = txttelefone1.Text & "-"
-    End If
-End Sub
-
-Private Sub txttelefone1_KeyPress(ByVal KeyAscii As MSForms.ReturnInteger)
-    'Limita a Qde de caracteres
-    txttelefone1.MaxLength = 14
-    
-    'para permitir que apenas números sejam digitados
     If KeyAscii < Asc("0") Or KeyAscii > Asc("9") Then
         KeyAscii = 0
     End If
 End Sub
+
+
+
 
 Private Sub UserForm_Activate()
 With Me.cboxtipoprocesso

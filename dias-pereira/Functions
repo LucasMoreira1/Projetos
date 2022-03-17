@@ -1,3 +1,39 @@
+'Função para habilitar botões de maximizar e minimizar
+    #If VBA7 Or Win64 Then
+        '64bit
+        Private Declare PtrSafe Function SetWindowLong Lib "user32.dll" Alias "SetWindowLongA" ( _
+                    ByVal hwnd As Long, ByVal nIndex As Long, ByVal dwNewLong As Long) As Long
+        
+        Private Declare PtrSafe Function FindWindow Lib "user32.dll" Alias "FindWindowA" ( _
+                ByVal lpClassName As String, ByVal lpWindowName As String) As Long
+        
+        Private Declare PtrSafe Function GetWindowLong Lib "user32.dll" Alias "GetWindowLongA" ( _
+                ByVal hwnd As Long, ByVal nIndex As Long) As Long
+    #Else
+        '32bit
+        Private Declare Function SetWindowLong Lib "user32.dll" Alias "SetWindowLongA" ( _
+                    ByVal hwnd As Long, ByVal nIndex As Long, ByVal dwNewLong As Long) As Long
+        
+        Private Declare Function FindWindow Lib "user32.dll" Alias "FindWindowA" ( _
+                ByVal lpClassName As String, ByVal lpWindowName As String) As Long
+        
+        Private Declare Function GetWindowLong Lib "user32.dll" Alias "GetWindowLongA" ( _
+                ByVal hwnd As Long, ByVal nIndex As Long) As Long
+    #End If
+    
+    Private Const GWL_STYLE = -16
+    Private Const WS_MAXIMIZEBOX = &H10000
+    Private Const WS_MINIMIZEBOX = &H20000
+'Função para habilitar botões de maximizar e minimizar
+    Function SetMaxMin(xCaption As String)
+    Dim hwnd As Long
+    Dim stylelama As Long
+    
+    hwnd = FindWindow("ThunderDFrame", xCaption)
+    stylelame = GetWindowLong(hwnd, GWL_STYLE)
+    SetWindowLong hwnd, GWL_STYLE, stylelame Or WS_MAXIMIZEBOX Or WS_MINIMIZEBOX
+    End Function
+
 Sub retornar_programa()
 
 Application.Visible = False
@@ -15,20 +51,44 @@ Sub Editar_Cliente()
     
     'Dados Processo
         .txtautor.Value = PaginaInicial.LV1.SelectedItem.SubItems(1)
-        .txtreu.Value = PaginaInicial.LV1.SelectedItem.SubItems(2)
-        .txttelefone1.Value = PaginaInicial.LV1.SelectedItem.SubItems(3)
-        .txtnascimento.Value = PaginaInicial.LV1.SelectedItem.SubItems(5)
-        .txtidprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(6)
-        .txtprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(7)
-        .cboxstatusprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(8)
-        .txtnatprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(9)
-        .txtassunto1.Value = PaginaInicial.LV1.SelectedItem.SubItems(10)
-        .txtassunto2.Value = PaginaInicial.LV1.SelectedItem.SubItems(11)
-        .txtassunto3.Value = PaginaInicial.LV1.SelectedItem.SubItems(12)
-        .txtdatapericia.Value = PaginaInicial.LV1.SelectedItem.SubItems(13)
-        .txtdataaudiencia.Value = PaginaInicial.LV1.SelectedItem.SubItems(14)
-        .txttipoaudiencia.Value = PaginaInicial.LV1.SelectedItem.SubItems(15)
-        .txtobservacao.Value = PaginaInicial.LV1.SelectedItem.SubItems(16)
+        .txtnacionalidade.Value = PaginaInicial.LV1.SelectedItem.SubItems(2)
+        .txtestadocivil.Value = PaginaInicial.LV1.SelectedItem.SubItems(3)
+        .txtprofissao.Value = PaginaInicial.LV1.SelectedItem.SubItems(4)
+        .txtrg.Value = PaginaInicial.LV1.SelectedItem.SubItems(5)
+        .txtcpf.Value = PaginaInicial.LV1.SelectedItem.SubItems(6)
+        .txtnascimento.Value = PaginaInicial.LV1.SelectedItem.SubItems(7)
+        .txtemail.Value = PaginaInicial.LV1.SelectedItem.SubItems(8)
+        .txttelefone1.Value = PaginaInicial.LV1.SelectedItem.SubItems(9)
+        .txttelefone2.Value = PaginaInicial.LV1.SelectedItem.SubItems(10)
+        .txtcep.Value = PaginaInicial.LV1.SelectedItem.SubItems(11)
+        .txtlogradouro.Value = PaginaInicial.LV1.SelectedItem.SubItems(12)
+        .txtnumero.Value = PaginaInicial.LV1.SelectedItem.SubItems(13)
+        .txtcomplemento.Value = PaginaInicial.LV1.SelectedItem.SubItems(14)
+        .txtbairro.Value = PaginaInicial.LV1.SelectedItem.SubItems(15)
+        .txtcidade.Value = PaginaInicial.LV1.SelectedItem.SubItems(16)
+        .txtestado.Value = PaginaInicial.LV1.SelectedItem.SubItems(17)
+        .txtreu.Value = PaginaInicial.LV1.SelectedItem.SubItems(18)
+        .txtcnpjreu.Value = PaginaInicial.LV1.SelectedItem.SubItems(19)
+        .txttelefonereu.Value = PaginaInicial.LV1.SelectedItem.SubItems(20)
+        .txtcepreu.Value = PaginaInicial.LV1.SelectedItem.SubItems(21)
+        .txtlogradouroreu.Value = PaginaInicial.LV1.SelectedItem.SubItems(22)
+        .txtnumeroreu.Value = PaginaInicial.LV1.SelectedItem.SubItems(23)
+        .txtcomplementoreu.Value = PaginaInicial.LV1.SelectedItem.SubItems(24)
+        .txtbairroreu.Value = PaginaInicial.LV1.SelectedItem.SubItems(25)
+        .txtcidadereu.Value = PaginaInicial.LV1.SelectedItem.SubItems(26)
+        .txtestadoreu.Value = PaginaInicial.LV1.SelectedItem.SubItems(27)
+        .txtprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(28)
+        .cboxtipoprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(29)
+        .txtidprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(30)
+        .cboxstatusprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(31)
+        .txtnatprocesso.Value = PaginaInicial.LV1.SelectedItem.SubItems(32)
+        .txtassunto1.Value = PaginaInicial.LV1.SelectedItem.SubItems(33)
+        .txtassunto2.Value = PaginaInicial.LV1.SelectedItem.SubItems(34)
+        .txtassunto3.Value = PaginaInicial.LV1.SelectedItem.SubItems(35)
+        .txtdatapericia.Value = PaginaInicial.LV1.SelectedItem.SubItems(36)
+        .txttipoaudiencia.Value = PaginaInicial.LV1.SelectedItem.SubItems(37)
+        .txtdataaudiencia.Value = PaginaInicial.LV1.SelectedItem.SubItems(38)
+        .txtobservacao.Value = PaginaInicial.LV1.SelectedItem.SubItems(39)
         .Show
     End With
 End Sub
