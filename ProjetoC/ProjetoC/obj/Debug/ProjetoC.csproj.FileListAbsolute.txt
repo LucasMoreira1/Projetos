@@ -1,0 +1,15 @@
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\bin\Debug\ProjetoC.exe.config
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\bin\Debug\ProjetoC.exe
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\bin\Debug\ProjetoC.pdb
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\ProjetoC.csproj.AssemblyReference.cache
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\ProjetoC.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\Interop.Microsoft.Office.Core.dll
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\Interop.VBIDE.dll
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\ProjetoC.csproj.ResolveComReference.cache
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\ProjetoC.Form1.resources
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\ProjetoC.Properties.Resources.resources
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\ProjetoC.csproj.GenerateResource.cache
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\ProjetoC.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\ProjetoC.exe
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\obj\Debug\ProjetoC.pdb
+C:\Users\Lucas Moreira\Desktop\Projetos\ProjetoC\ProjetoC\bin\Debug\Database1.accdb

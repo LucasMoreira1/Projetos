@@ -354,8 +354,8 @@ With Me.cboxstatusprocesso
     .AddItem "Em andamento"
     .AddItem "Suspenso"
 End With
-cboxtipoprocesso.Text = "Judicial"
-cboxstatusprocesso.Text = "Em andamento"
+'cboxtipoprocesso.Text = "Judicial"
+'cboxstatusprocesso.Text = "Em andamento"
 
 Me.ScrollTop = 0
 

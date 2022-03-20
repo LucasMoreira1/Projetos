@@ -34,8 +34,14 @@
 ''      - Personalizar Lista LV1 para mostrar apenas dados importantes. (Remover lista/Menos info possivel).
 ''          - Testar pesquisa (Filtro) com esse ajuste na Lista LV1.
 ''      - Continuar migrando funções para o modulo "Functions"
+''      - Criar video apresentação para novos cliente
+''      - Não fechar programa ao clicar em "Cancelar" durante encerramento do app.
+''      - Criar fluxo de caixa
+''      - Criar petições automaticamente com dados dos clientes
 ''
-''
+
+
+
 
 '                                   -----------------------------
 '                                   |      Listas e ajustes     |
