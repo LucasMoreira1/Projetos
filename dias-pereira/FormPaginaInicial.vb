@@ -38,6 +38,8 @@
 ''      - Não fechar programa ao clicar em "Cancelar" durante encerramento do app.
 ''      - Criar fluxo de caixa
 ''      - Criar petições automaticamente com dados dos clientes
+''      - Criar banco de dados externo ACCESS (Solucionando problema multi-usuário)
+''
 ''
 
 
