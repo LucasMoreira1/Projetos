@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "7P09Wy95DsjYIz2giOI5bYgbTIwCv7MXEf12o5DYQI0gnRkIXi63YHE1na54RT2wZFWon6MZ1ApUoWHeYP/bYw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lucas Moreira\\Desktop\\Projetos\\SONDA\\SONDA_EMBRAER\\SONDA_EMBRAER\\SCHEDULER.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lucas Moreira\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Lucas Moreira\\.nuget\\packages\\selenium.webdriver\\4.2.0\\selenium.webdriver.4.2.0.nupkg.sha512",
+    "C:\\Users\\Lucas Moreira\\.nuget\\packages\\selenium.webdriver.chromedriver\\102.0.5005.6102\\selenium.webdriver.chromedriver.102.0.5005.6102.nupkg.sha512"
+  ],
+  "logs": []
+}
