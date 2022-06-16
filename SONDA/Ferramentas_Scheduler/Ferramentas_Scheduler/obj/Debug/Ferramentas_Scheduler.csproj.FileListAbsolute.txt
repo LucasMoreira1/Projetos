@@ -11,3 +11,7 @@ C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_
 C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.csproj.CopyComplete
 C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.exe
 C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.pdb
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\bin\Debug\Ferramentas_Scheduler.exe.manifest
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\bin\Debug\Ferramentas_Scheduler.application
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.exe.manifest
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.application
