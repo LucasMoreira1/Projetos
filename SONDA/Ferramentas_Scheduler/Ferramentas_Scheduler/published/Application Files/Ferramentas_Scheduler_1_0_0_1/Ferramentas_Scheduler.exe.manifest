@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="Ferramentas_Scheduler.exe" version="1.0.0.1" publicKeyToken="f35056595b156889" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="Ferramentas_Scheduler" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="Ferramentas_Scheduler.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opções de Manifesto do UAC
+          Para alterar o nível de Controle de Conta de Usuário do Windows, substitua o nó
+          requestedExecutionLevel por um dos seguintes.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Para utilizar a Virtualização de Arquivos e Registro para manter a compatibilidade com versões anteriores,
+         exclua o nó requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ferramentas_Scheduler.exe" size="10752">
+      <assemblyIdentity name="Ferramentas_Scheduler" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>/p9QkGtfWgSW3GS+NUqaT5Dvd358Gosb8E0/MfAL5eI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WebDriver.dll" size="7984640">
+      <assemblyIdentity name="WebDriver" version="4.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>+fT5mK20nv7svddd8C8BWRnHlhdOISHlE8+6tWJW/pE=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="Ferramentas_Scheduler.exe.config" size="187">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+CM46OnHRrXZXNLMx7+U3V3iubiYL//d8hGOR13lDhU=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=NOTEPE04E8LX\Lucas Moreira" issuerKeyHash="dc4e92af0ddae1502ab1a9d020803edcba721cc9" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>1BymRHl9iG2m60HpdfZZlkpAJ13pSeNOI71y0WTLd5U=</DigestValue></Reference></SignedInfo><SignatureValue>E6BITlU6aSpk+p+WX08jdX6klL3cNV7k0uZ6I1MRYzkofR0ClXUFRWb6VzPKGMWTTcce0Y4PKUGZKR7rc4YxaNegV82rGhs8MBqnMwjiCWnkB8S8sqzgtPKDO5nTuZcJGcleN2ji5GsS4FVmR2CrzFnAmfb69oKPd4CV5gu+xNk=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xW1POz9vwBaw4d187hMK16ZsLg6et/4+G3qm10Q4CN/bl4q/k2EIXuGrziJc9FwujjeAvO6Qh7IsI2eMOe6b7y/SMzasLF7A6m7e1Dk6cvixTQD/Uzta5hMnSSajF/BnqY7YFJ9k371LRdtDmC1DvMxW3tltsxwdQNF7TBexVSU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9577cb64d172bd234ee349e95d27404a9659f675e941eba66d887d7944a61cd4" Description="" Url=""><as:assemblyIdentity name="Ferramentas_Scheduler.exe" version="1.0.0.1" publicKeyToken="f35056595b156889" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=NOTEPE04E8LX\Lucas Moreira</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>cdlzDo6rT/Yk6Ygn9o3n5lBlKeo7qWVf1e7UKF6b0QI=</DigestValue></Reference></SignedInfo><SignatureValue>KFuK/hT4q//8cP3EcUx8kzZDYBsldEf0Ptfo3iigxHBrQTyahQLNGLJXSHITuF8/1gWlXgCEjDwKB+YEnqSMVp5HLDRNlNbPEBoArytny1MQXddq+FhpDYO+jQn/EQct0aqBwCoDwch3dBG4yZ2oNgdpkNmVmWeSCTEQaR0Jnsk=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xW1POz9vwBaw4d187hMK16ZsLg6et/4+G3qm10Q4CN/bl4q/k2EIXuGrziJc9FwujjeAvO6Qh7IsI2eMOe6b7y/SMzasLF7A6m7e1Dk6cvixTQD/Uzta5hMnSSajF/BnqY7YFJ9k371LRdtDmC1DvMxW3tltsxwdQNF7TBexVSU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIICATCCAWqgAwIBAgIQOgaRKWDRz49JWT+VyM94STANBgkqhkiG9w0BAQsFADA/MT0wOwYDVQQDHjQATgBPAFQARQBQAEUAMAA0AEUAOABMAFgAXABMAHUAYwBhAHMAIABNAG8AcgBlAGkAcgBhMB4XDTIyMDYxNjAwNTU0OFoXDTIzMDYxNjA2NTU0OFowPzE9MDsGA1UEAx40AE4ATwBUAEUAUABFADAANABFADgATABYAFwATAB1AGMAYQBzACAATQBvAHIAZQBpAHIAYTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAxW1POz9vwBaw4d187hMK16ZsLg6et/4+G3qm10Q4CN/bl4q/k2EIXuGrziJc9FwujjeAvO6Qh7IsI2eMOe6b7y/SMzasLF7A6m7e1Dk6cvixTQD/Uzta5hMnSSajF/BnqY7YFJ9k371LRdtDmC1DvMxW3tltsxwdQNF7TBexVSUCAwEAATANBgkqhkiG9w0BAQsFAAOBgQAVut25dZ2m3NkwDqQL7A9xDrlw4UWMpaQyaj7Z5E0f4QXryrhj8itt0kwQUUUx1YyExYpumAOpbx6jcsIww4GKyzLizVx6iMUwxGLdJZ9+tyip3hdmInJ0qP2WArc4t+wiQKRUJXrdeP0vsEANsbWsX18hwuU1l00M+asPkDiRMQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
