@@ -37,6 +37,10 @@
             this.btnAlterarSenhaSAP = new System.Windows.Forms.Button();
             this.lblLogin = new System.Windows.Forms.Label();
             this.lblHorario = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblBaterPonto
@@ -93,6 +97,7 @@
             this.btnArchiveDiario.TabIndex = 2;
             this.btnArchiveDiario.Text = "Executar";
             this.btnArchiveDiario.UseVisualStyleBackColor = true;
+            this.btnArchiveDiario.Click += new System.EventHandler(this.btnArchiveDiario_Click);
             // 
             // btnAlterarSenhaSAP
             // 
@@ -121,11 +126,43 @@
             this.lblHorario.TabIndex = 3;
             this.lblHorario.Text = "Horário";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(154, 72);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 4;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(154, 100);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 4;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(154, 129);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 4;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(154, 157);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.TabIndex = 4;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(389, 275);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblHorario);
             this.Controls.Add(this.lblLogin);
             this.Controls.Add(this.btnAlterarSenhaSAP);
@@ -155,6 +192,10 @@
         private System.Windows.Forms.Button btnAlterarSenhaSAP;
         private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.Label lblHorario;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
