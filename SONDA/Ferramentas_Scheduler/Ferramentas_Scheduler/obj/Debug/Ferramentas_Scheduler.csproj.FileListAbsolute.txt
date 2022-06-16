@@ -1,0 +1,13 @@
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\bin\Debug\Ferramentas_Scheduler.exe.config
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\bin\Debug\Ferramentas_Scheduler.exe
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\bin\Debug\Ferramentas_Scheduler.pdb
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\bin\Debug\WebDriver.dll
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.csproj.AssemblyReference.cache
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.csproj.SuggestedBindingRedirects.cache
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.FormPrincipal.resources
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.Properties.Resources.resources
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.csproj.GenerateResource.cache
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.csproj.CoreCompileInputs.cache
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.csproj.CopyComplete
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.exe
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.pdb

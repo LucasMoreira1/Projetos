@@ -83,6 +83,7 @@
             this.btnBaterPonto.TabIndex = 2;
             this.btnBaterPonto.Text = "Executar";
             this.btnBaterPonto.UseVisualStyleBackColor = true;
+            this.btnBaterPonto.Click += new System.EventHandler(this.btnBaterPonto_Click);
             // 
             // btnArchiveDiario
             // 
