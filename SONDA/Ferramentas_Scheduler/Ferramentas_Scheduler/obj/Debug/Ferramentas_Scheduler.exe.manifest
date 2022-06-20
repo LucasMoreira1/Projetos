@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ferramentas_Scheduler.exe" size="15872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Ferramentas_Scheduler.exe" size="16896">
       <assemblyIdentity name="Ferramentas_Scheduler" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>y5l6eI5l9xrQsQuvolElDwbIB51IlFOdIDkAUoTQWhI=</dsig:DigestValue>
+        <dsig:DigestValue>EFqS+qXYRaDACTltjNRZYGO+d6Xco9HW/NojgB6v3Zg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

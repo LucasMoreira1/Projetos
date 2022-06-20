@@ -17,3 +17,4 @@ C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_
 C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.application
 C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Interop.SAPFEWSELib.dll
 C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Ferramentas_Scheduler.csproj.ResolveComReference.cache
+C:\Users\Lucas Moreira\Desktop\Projetos\SONDA\Ferramentas_Scheduler\Ferramentas_Scheduler\obj\Debug\Interop.SapROTWr.dll
